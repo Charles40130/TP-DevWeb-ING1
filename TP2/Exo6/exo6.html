@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6</title>
+    <style>
+        body { text-align: center; }
+        button { margin: 10px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Événements en JavaScript</h2>
+    
+    <button onclick="changerCouleurFond()">Changer couleur de fond</button>
+    <button onclick="reset()">Réinitialiser</button>
+    <button onclick="documentWriteTest()">Utiliser document.write()</button>
+    <br>
+    <img id="imageTest" src="image.png" alt="Image" width="200" 
+         onmouseover="changerImage()" 
+         onmouseout="remettreImage()">
+    
+    <script src="exo6.js"></script>
+</body>
+</html>

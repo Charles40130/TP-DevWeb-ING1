@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles.css">
+    
+</head>
+<body>
+    <script src="../scripts/script_contact.js"></script>
+    <div class="form-container">
+        <h2>Contactez-nous</h2>
+
+        <form id="contactForm">
+            <input type="text" id="nom" name="nom" placeholder="Nom" required>
+            <div id="nomError" class="error-message"></div>
+
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+            <div id="prenomError" class="error-message"></div>
+
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <div id="emailError" class="error-message"></div>
+
+            <div class="genre">
+                <label>Genre :</label>
+                <label><input type="radio" name="genre" value="Homme"> Homme</label>
+                <label><input type="radio" name="genre" value="Femme"> Femme</label>
+            </div>
+            <div id="genreError" class="error-message"></div>
+
+            <select name="metier" id="metier">
+                <option value="Jardinier">Jardinier</option>
+                <option value="Paysagiste">Paysagiste</option>
+                <option value="Autre">Autre</option>
+            </select>
+
+            <input type="date" id="date_naissance" name="date_naissance" required>
+            <div id="dateNaissanceError" class="error-message"></div>
+
+            <input type="text" id="sujet" name="sujet" placeholder="Sujet" required>
+            <div id="sujetError" class="error-message"></div>
+
+            <textarea name="message" id="message" placeholder="Message" required></textarea>
+            <div id="messageError" class="error-message"></div>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>

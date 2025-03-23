@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rosiers</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h2>Catalogue des Rosiers</h2>
+    <button id="toggleStock" onclick="toggleStock()">Afficher/Cacher Stock</button>
+
+    <div class="catalogue">
+
+        <div class="card">
+            <img src="../img/rosiers_gdefleur.jpeg" alt="Grandes fleurs" onclick="openImageModal('../img/rosiers_gdefleur.jpeg')">
+            <div class="card-content">
+                <h3>Rosier grandes fleurs</h3>
+                <p>Une magnifique variété de rosiers à grandes fleurs, parfaite pour orner votre jardin.</p>
+                <div class="price">20.00 €</div>
+                <p class="stock">Stock: 10</p>
+                <div class="quantity">
+                    <button class="minus" onclick="changeQuantity(this, -1)">-</button>
+                    <input type="number" value="0" min="0" max="10" class="quantity-input">
+                    <button class="plus" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" disabled>Ajouter au panier</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../img/rosiers_petites.webp" alt="Petites fleurs" onclick="openImageModal('../img/rosiers_petites.webp')">
+            <div class="card-content">
+                <h3>Rosier petites fleurs</h3>
+                <p>Rosiers aux petites fleurs colorées, idéals pour les bordures ou les massifs.</p>
+                <div class="price">15.00 €</div>
+                <p class="stock">Stock: 5</p>
+                <div class="quantity">
+                    <button class="minus" onclick="changeQuantity(this, -1)">-</button>
+                    <input type="number" value="0" min="0" max="5" class="quantity-input">
+                    <button class="plus" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" disabled>Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/rosies_nuit.jpeg" alt="Rose de nuit" onclick="openImageModal('../img/rosies_nuit.jpeg')">
+            <div class="card-content">
+                <h3>Rosier rose de nuit</h3>
+                <p>Rosiers à fleurs sombres qui s'épanouissent particulièrement au coucher du soleil.</p>
+                <div class="price">22.00 €</div>
+                <p class="stock">Stock: 12</p>
+                <div class="quantity">
+                    <button class="minus" onclick="changeQuantity(this, -1)">-</button>
+                    <input type="number" value="0" min="0" max="12" class="quantity-input">
+                    <button class="plus" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" disabled>Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="Image agrandie">
+        </div>
+    </div>
+
+    <script src="../scripts/scripts.js"></script>
+</body>
+</html>

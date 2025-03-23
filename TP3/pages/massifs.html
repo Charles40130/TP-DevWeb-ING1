@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Massifs de Fleurs</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h2>Catalogue des Massifs de Fleurs</h2>
+    
+    <!-- afficher/cacher les stocks -->
+    <button id="toggleStock" onclick="toggleStock()">Afficher/Cacher Stock</button>
+
+    <div class="catalogue">
+     
+        <div class="card">
+            <img src="../img/bulbes_crocosmia.jpeg" alt="Massif de fleurs soleil" onclick="openImageModal('../img/bulbes_crocosmia.jpeg')">
+            <div class="card-content">
+                <h3>Massif Soleil</h3>
+                <p>Un massif éclatant de couleurs vives, parfait pour illuminer votre jardin.</p>
+                <div class="price">25.00 €</div>
+                <p class="stock">Stock: 15</p> <!-- Colonne de stock cachée par défaut -->
+                <div class="quantity">
+                    <button class="minus" onclick="changeQuantity(this, -1)">-</button>
+                    <input type="number" value="0" min="0" max="15" class="quantity-input">
+                    <button class="plus" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" disabled>Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/massif_ombre.avif" alt="Massif ombragé" onclick="openImageModal('../img/massif_ombre.avif')">
+            <div class="card-content">
+                <h3>Massif Ombragé</h3>
+                <p>Des fleurs adaptées aux zones ombragées, créant un espace tranquille et frais.</p>
+                <div class="price">30.00 €</div>
+                <p class="stock">Stock: 10</p>
+                <div class="quantity">
+                    <button class="minus" onclick="changeQuantity(this, -1)">-</button>
+                    <input type="number" value="0" min="0" max="10" class="quantity-input">
+                    <button class="plus" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" disabled>Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/massif_floraison.jpeg" alt="Massif de floraison continue" onclick="openImageModal('../img/massif_floraison.jpeg')">
+            <div class="card-content">
+                <h3>Massif Floraison Continue</h3>
+                <p>Un choix idéal pour profiter de fleurs tout au long de la saison.</p>
+                <div class="price">28.00 €</div>
+                <p class="stock">Stock: 12</p> 
+                <div class="quantity">
+                    <button class="minus" onclick="changeQuantity(this, -1)">-</button>
+                    <input type="number" value="0" min="0" max="12" class="quantity-input">
+                    <button class="plus" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" disabled>Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../img/massif_hiver.jpeg" alt="Massif d'hiver" onclick="openImageModal('../img/massif_hiver.jpeg')">
+            <div class="card-content">
+                <h3>Massif Hivernal</h3>
+                <p>Des plantes robustes qui ajoutent de la couleur même pendant les mois d'hiver.</p>
+                <div class="price">22.00 €</div>
+                <p class="stock">Stock: 8</p>
+                <div class="quantity">
+                    <button class="minus" onclick="changeQuantity(this, -1)">-</button>
+                    <input type="number" value="0" min="0" max="8" class="quantity-input">
+                    <button class="plus" onclick="changeQuantity(this, 1)">+</button>
+                </div>
+                <button class="add-to-cart" disabled>Ajouter au panier</button>
+            </div>
+        </div>
+    </div>
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="Image agrandie">
+        </div>
+    </div>
+
+    <script src="../scripts/scripts.js"></script>
+</body>
+</html>
